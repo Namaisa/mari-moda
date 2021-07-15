@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@200&family=Nunito:wght@200;300;400;600;700;800&display=swap"
+            rel="stylesheet">
+
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/floating-elements.css">
+        <title>MARIA MODA - Página inicial</title>
+    </head>
+    <body>
+        <header>
+            <h1>MARI MODA</h1>
+            <div class="line"></div>
+            <div class="headerNavContainer"></div>
+        </header>
+        <main>
+            <section id="homePage">
+                <section class="presentation">
+                    <p>
+                        Conheça a loja MARI MODA aqui você encontra roupas e
+                        acessórios que são tendência!
+                        Fique à vontade, se estiver com dúvidas a Mari está
+                        pronta pra te ajudar!
+                    </p>
+                </section>
+
+                <section id="highlight">
+                    <h2 id="highlightTitle" class="sessionTitles">Destaques</h2>
+                    <div id="highlightProducts" class="productsContainer"></div>
+                </section>
+
+                <section id="blouses">
+                    <h2 id="blousesTitle" class="sessionTitles">Blusas</h2>
+                    <div id="blousesProducts" class="productsContainer"></div>
+                </section>
+
+                <section id="dresses">
+                    <h2 id="dressesTitle" class="sessionTitles">Vestidos</h2>
+                    <div id="dressesProducts" class="productsContainer"></div>
+                </section>
+
+                <section id="acessories">
+                    <h2 id="acessoriesTitle" class="sessionTitles">Acessórios</h2>
+                    <div id="acessoriesProducts" class="productsContainer"></div>
+                </section>
+            </section>
+            <section id="productSections"></section>
+        </main>
+        <footer>
+            <h3>Encontre e acompanhe a loja</h4>
+            <div class="footerContent">
+                <section>
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><strong>Telefone:</strong> (00) 0000-0000</li>
+                        <li><strong>Whatsapp:</strong> (00) 00000-0000</li>
+                        <li><strong>Email:</strong> contato@marimoda.com</li>
+                        <li><strong>Redes sociais:</strong> @marimoda</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>Localização</h4>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11805.626570172064!2d-49.55353969095009!3d-28.394088045856268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9521babdadfb0655%3A0x7f5960d93c23fa83!2sSerra%20do%20Rio%20do%20Rastro!5e0!3m2!1spt-BR!2sbr!4v1625267043882!5m2!1spt-BR!2sbr"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </section>
+            </div>
+
+            <div class="rightsReserved">
+                © Todos os direitos reservados.
+            </div>
+        </footer>
+        <div class="popup">
+            <section id="shopListPopup">
+                <span id="closeShopListPopup" class="closeShopListIcon">x</span>
+                <h3>BOLSA DE COMPRAS</h3>
+                <section id="shopList"></section>
+                <div class="shopSum">
+                    <h4>Total:</h4>
+                    <p id="showShopSum">
+                        <small>R$</small>
+                        <strong>----</strong>
+                    </p>
+                </div>
+                <button id="finishBuy">FINALIZAR COMPRA</button>
+            </section>
+        </div>
+        <div id="mariDollContainer">
+            <img src="./images/mari-doll.svg" alt="Mascote Mari Doll"
+                id="mariDoll">
+            <section id="mariDollBaloon">
+                <div id="closeBotIcon">x</div>
+                <div id="ballonsContainer"></div>
+                <div class="sendContainer">
+                    <div id="clientAnswerCont"></div>
+                    <div id="sendButton"></div>
+                </div>
+            </section>
+        </div>
+
+        <script src="./scripts/products.js"></script>
+        <script src="./scripts/elements.js"></script>
+        <script src="./scripts/shop-system.js"></script>
+        <script src="./scripts/interactions.js"></script>
+        <script src="./scripts/mari-bot.js"></script>
+    </body>
+</html>

@@ -1,0 +1,395 @@
+:root {
+  --var-soft-red: #f2506e;
+  --var-salmon: #f294a5;
+  --var-pink: #f205b3;
+  --var-violet: #241c40;
+  --var-violet-hover: #372c5f;
+  --var-cream: #f2e8dc;
+  --var-grey-text: #322e3f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  min-height: calc(100vh - 20px);
+  background-color: var(--var-cream);
+}
+
+h1 {
+  text-align: center;
+  color: var(--var-violet);
+  font-size: 3rem;
+  font-family: "Advent Pro", sans-serif;
+  font-weight: 200;
+}
+
+.line {
+  height: 3px;
+  margin: auto;
+  background-color: var(--var-pink);
+}
+.headerNavContainer {
+  position: relative;
+  margin-top: -1px;
+}
+.headerNavColor {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 46px;
+  background-color: var(--var-violet);
+}
+#pageSelected {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 140px;
+  height: 46px;
+  background-color: var(--var-salmon);
+  transition: 500ms;
+}
+
+.headerNav {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 46px;
+  margin: auto;
+  color: var(--var-cream);
+  font-size: 1.2rem;
+}
+ul {
+  list-style: none;
+}
+.headerNav > ul {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: auto;
+}
+.headerNav > ul li {
+  padding: 0 15px;
+  cursor: pointer;
+}
+.headerNav > ul li:hover {
+  color: #f1c1ca;
+}
+
+#homePage {
+  margin-top: 46px;
+}
+.hideHomePage {
+  display: none;
+}
+
+.presentation {
+  background-image: url(../images/cover-hp.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.presentation p {
+  width: 40%;
+  padding: 40px 150px 70px 0;
+  margin: auto;
+  font-size: 1.5rem;
+  color: var(--var-grey-text);
+}
+
+#highlight {
+  padding-bottom: 100px;
+}
+#blouses {
+  background-color: #fff;
+  background-image: url(../images/blouses-session-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#dresses {
+  background-color: var(--var-salmon);
+  background-image: url(../images/dresses-session-bg.jpg);
+  background-position-x: right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#acessories {
+  background-color: #fff;
+  background-image: url(../images/acessories-session-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sessionTitles {
+  padding: 20px 0 10px 0;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+#highlightTitle {
+  padding-top: 10px;
+  background: linear-gradient(
+    0deg,
+    var(--var-salmon) 0%,
+    var(--var-soft-red) 100%
+  );
+  font-size: 2rem;
+  color: #fff;
+}
+
+#blousesTitle {
+  color: var(--var-violet-hover);
+}
+#dressesTitle {
+  color: var(--var-cream);
+}
+#acessoriesTitle {
+  color: var(--var-salmon);
+}
+.productsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: calc(70% - 20px);
+}
+#highlightProducts {
+  margin: auto;
+  border-radius: 0 0 25px 25px;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+}
+#blousesProducts {
+  margin-left: auto;
+}
+#acessoriesProducts {
+  margin: auto;
+}
+.productContainer {
+  width: 28%;
+  margin: 25px 0;
+}
+.productContainer .productImage {
+  width: 100%;
+}
+
+.productContainer .productName {
+  overflow: hidden;
+  height: 55px;
+  margin: 10px 0 5px 0;
+  color: var(--var-grey-text);
+}
+
+.productContainer .productValue {
+  padding-right: 5px;
+  text-align: right;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--var-violet-hover);
+}
+
+.productContainer span {
+  font-size: 0.8rem;
+}
+
+.productContainer .add {
+  display: flex;
+  height: 50px;
+}
+
+.productContainer .addIcon {
+  z-index: 1;
+  height: 50px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.productContainer .addText {
+  display: flex;
+  align-items: center;
+  width: 1px;
+  margin-left: -28px;
+  border-radius: 5px;
+  background-color: var(--var-soft-red);
+  cursor: pointer;
+  transition: 400ms;
+}
+
+.addTextOn {
+  width: 200px !important;
+}
+
+.productContainer .addText p {
+  display: none;
+  padding: 0 10px 0 30px;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.addTextOnP {
+  display: block !important;
+}
+
+#productSections {
+  display: none;
+  width: 60%;
+  margin: 80px auto 40px auto;
+  padding: 0 20px;
+  border: 2px solid #fff;
+  border-radius: 25px;
+}
+
+.showProductSections {
+  display: block !important;
+}
+
+#productSections .productContainer {
+  display: inline-block;
+  width: calc(33% - 4%);
+  padding: 1%;
+  margin: 1%;
+  border-radius: 10px;
+  background-color: #ffffff49;
+}
+
+footer {
+  padding-top: 50px;
+  background-color: var(--var-violet);
+  color: var(--var-cream);
+}
+
+footer h3 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 200;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.footerContent section h4 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.footerContent section:last-child h4 {
+  text-align: right;
+}
+
+.footerContent section ul {
+  list-style: none;
+}
+
+.footerContent section ul li {
+  margin-bottom: 5px;
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+.footerContent section iframe {
+  width: 400px;
+  height: 200px;
+  border: 0;
+}
+
+.rightsReserved {
+  padding: 10px 0;
+  background-color: var(--var-pink);
+  text-align: center;
+  color: var(--var-salmon);
+}
+
+@media screen and (max-width: 1200px) {
+  #blouses {
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .headerNav ul {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 750px) {
+  .presentation p {
+    width: 60%;
+    padding: 40px;
+    margin: 0;
+    margin-left: auto;
+    text-align: end;
+  }
+
+  #blouses {
+    background-image: linear-gradient(0deg, #ffffff80 0%, #ffffff80 100%),
+      url(../images/blouses-session-bg.jpg);
+  }
+  #dresses {
+    background-size: cover;
+    background-blend-mode: soft-light;
+  }
+
+  .productsContainer {
+    width: calc(90% - 20px);
+  }
+  #blousesProducts,
+  #dressesProducts {
+    margin: auto;
+  }
+  .productContainer {
+    width: 40%;
+  }
+  .addText p {
+    font-size: 0.8rem !important;
+  }
+
+  #productSections {
+    width: calc(90% - 20px);
+    padding: 0 10px;
+  }
+  #productSections .productContainer {
+    display: inline-block;
+    width: calc(50% - 6%);
+    padding: 2%;
+    margin: 20px 1%;
+  }
+
+  footer h3 {
+    font-size: 1.5rem;
+  }
+  .footerContent {
+    flex-direction: column;
+    width: 80%;
+    margin: 40px auto 0 auto;
+  }
+  .footerContent section:first-child {
+    margin-bottom: 20px;
+  }
+  .footerContent section h4 {
+    margin-bottom: 15px;
+  }
+  .footerContent section:last-child h4 {
+    text-align: left;
+  }
+  .footerContent section iframe {
+    width: 100%;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .presentation p {
+    width: calc(100% - 40px);
+    padding: 100px 20px 10px 20px;
+    background: linear-gradient(0deg, #ffffff70 0%, transparent 80%);
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+}
